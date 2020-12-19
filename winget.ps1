@@ -13,8 +13,13 @@ else
 
 # install packages
 $WINGET_PACKAGES = @()
-winget install --silent "1password"
-winget install --silent "CPU-Z"
-winget install --silent "Discord"
-winget install --silent "Fork"
-winget install --silent "AutoHotkey"
+winget install "1password"
+winget install "CPU-Z"
+winget install "GPU-Z"
+winget install "Discord"
+winget install "Fork"
+winget install "AutoHotkey"
+winget install "7Zip"
+winget install "Windows Terminal"
+winget install "Unity Hub"
+winget install "Slack"
