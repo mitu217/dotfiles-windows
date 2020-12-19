@@ -15,4 +15,4 @@ else
 $WINGET_PACKAGES = @(
   "1password"  
 )
-winget install --silent $CHOCO_PACKAGES
+winget install --silent $WINGET_PACKAGES
