@@ -13,6 +13,10 @@ else
 
 # install packages
 $WINGET_PACKAGES = @(
-  "1password"  
+    "1password"  
+    "CPU-Z"
+    "Discord"
+    "Fork"
+    "AutoHotkey"
 )
 winget install --silent $WINGET_PACKAGES
