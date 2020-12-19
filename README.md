@@ -1,6 +1,9 @@
 # windows-dotfiles
 dotfiles for windows
 
+* install packages by winget
+* when you double-click a zip file, it will be immediately unzipped by 7zip
+
 ## Install
 running on PowerShell
 
