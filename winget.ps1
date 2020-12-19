@@ -1,10 +1,10 @@
 # install winget
 # not needed once winget is released
-if (Get-Command winget -errorAction SilentlyContinue)
+try (Get-Command winget)
 {
     "already installed winget"
 }
-else
+catch
 {
     Invoke-WebRequest -UseBasicParsing -Uri https://github.com/microsoft/winget-cli/releases/download/v0.2.2941-preview/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.appxbundle -OutFile winget-cli.appbundle
     Add-AppPackage winget-cli.appbundle
