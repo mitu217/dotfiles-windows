@@ -1,5 +1,5 @@
 # Install winget
-#　Not needed once winget is released
+# Not needed once winget is released
 if (Get-Command winget -errorAction SilentlyContinue)
 {
     "already installed winget"
