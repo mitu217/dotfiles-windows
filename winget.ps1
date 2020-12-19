@@ -1,7 +1,7 @@
 # Install winget
 if (Get-Command winget -errorAction SilentlyContinue)
 {
-    "already installed $WINGET_COMMAND"
+    "already installed winget"
 }
 else
 {
