@@ -1,6 +1,6 @@
 # install winget
 # not needed once winget is released
-if ([bool]Get-Command winget) {
+if (Get-Command winget -errorAction SilentlyContinue)
     "already installed winget"
 }
 else
