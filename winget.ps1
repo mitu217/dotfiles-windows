@@ -1,5 +1,5 @@
-# Install winget
-# Not needed once winget is released
+# install winget
+# not needed once winget is released
 if (Get-Command winget -errorAction SilentlyContinue)
 {
     "already installed winget"
@@ -10,3 +10,9 @@ else
     Add-AppPackage winget-cli.appbundle
     Remove-Item winget-cli.appbundle
 }
+
+# install packages
+$WINGET_PACKAGES = @(
+  "1password"  
+)
+winget install --silent $CHOCO_PACKAGES
