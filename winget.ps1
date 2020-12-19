@@ -1,8 +1,10 @@
 # install winget
 # not needed once winget is released
-try (Get-Command winget)
+try
 {
-    "already installed winget"
+    if (Get-Command winget) {
+        "already installed winget"
+    }
 }
 catch
 {
