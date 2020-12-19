@@ -4,7 +4,7 @@ $WINGET_VERSION = "v0.2.2941-preview"
 # Install winget
 if (Get-Command $WINGET_COMMAND -errorAction SilentlyContinue)
 {
-    "already installed `$WINGET_COMMAND`"
+    "already installed $WINGET_COMMAND"
 }
 else
 {
