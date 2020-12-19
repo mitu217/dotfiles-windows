@@ -1,15 +1,11 @@
-$WINGET_COMMAND = "winget"
-$WINGET_VERSION = "v0.2.2941-preview"
-
 # Install winget
-if (Get-Command $WINGET_COMMAND -errorAction SilentlyContinue)
+if (Get-Command winget -errorAction SilentlyContinue)
 {
     "already installed $WINGET_COMMAND"
 }
 else
 {
-    $APPBUNDLE_PATH = "winget-cli.appbundle"
-    wget https://github.com/microsoft/winget-cli/releases/download/$WINGET_VERSION/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.appxbundle > $APPBUNDLE_PATH
+    wget https://github.com/microsoft/winget-cli/releases/download/v0.2.2941-preview/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.appxbundle > winget-cli.appbundle
     Add-AppPackage winget-cli.appbundle
-    rm $APPBUNDLE_PATH
+    rm winget-cli.appbundle
 }
