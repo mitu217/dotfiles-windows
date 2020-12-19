@@ -12,11 +12,9 @@ else
 }
 
 # install packages
-$WINGET_PACKAGES = @(
-    "1password"  
-    "CPU-Z"
-    "Discord"
-    "Fork"
-    "AutoHotkey"
-)
-winget install --silent $WINGET_PACKAGES
+$WINGET_PACKAGES = @()
+winget install --silent "1password"
+winget install --silent "CPU-Z"
+winget install --silent "Discord"
+winget install --silent "Fork"
+winget install --silent "AutoHotkey"
