@@ -4,8 +4,9 @@
 $DOTFILES = "$env:USERPROFILE\.dotfiles"
 
 if (Test-Path ("$DOTFILES")) {
-  Set-Location $DOTFILES
+  Push-Location $DOTFILES
   git pull
+  Pop-Location
 }
 else {
   git config --global core.autoCRLF false
@@ -18,7 +19,7 @@ Start-Process powershell.exe -ArgumentList "-Command $DOTFILES/package/scoop/bun
 Start-Process powershell.exe -ArgumentList "-Command $DOTFILES/package/chocolatey/bundle.ps1" -Wait -Verb Runas
 
 # setup wsl2
-# Start-Process powershell.exe -Verb Runas -ArgumentList "-Command iex(new-object net.webclient).downloadstring('https://raw.githubusercontent.com/Mitu217/dotfiles-windows/main/wsl2.ps1'); pause" -Wait
+Start-Process powershell.exe -ArgumentList "-Command $DOTFILES/wsl2/wsl2.ps1" -Wait -Verb Runas
 
 # when you double-click a zip file, it will be immediately unzipped by 7zip
 #Invoke-WebRequest -UseBasicParsing -Uri https://raw.githubusercontent.com/Mitu217/dotfiles-windows/main/7-zip-default-extract.reg -OutFile 7-zip-default-extract.reg
