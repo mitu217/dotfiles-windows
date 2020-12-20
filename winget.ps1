@@ -36,7 +36,9 @@ $WINGET_PACKAGES = @(
     "Google Chrome"
     "Notion"
 )
+
 foreach($PACKAGE in $WINGET_PACKAGES){
+    # Returns a Boolean value by Quiet option
     if (winget list | Select-String -Pattern $PACKAGE -Quiet)
     {
         "$PACKAGE already installed"
