@@ -14,6 +14,7 @@ else
 # settings
 # 1. enable experimental mode
 #   a. list command
+#     list command is not perfect (https://github.com/microsoft/winget-cli/issues/119)
 Invoke-WebRequest -UseBasicParsing -Uri https://raw.githubusercontent.com/Mitu217/dotfiles-windows/main/settings.json -OutFile $env:LOCALAPPDATA\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\settings.json
 
 winget source update
