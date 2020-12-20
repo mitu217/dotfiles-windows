@@ -12,3 +12,5 @@ Remove-Item C:\Users\mtksk\Downloads\wsl_update_x64.msi
 # set default version
 wsl --set-default-version 2
 
+# enable hyper-v
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
