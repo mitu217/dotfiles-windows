@@ -33,6 +33,7 @@ $WINGET_PACKAGES = @(
     "Google Chrome"
     "Notion"
     "Git"
+    "Toolbox"
 )
 foreach($PACKAGE in $WINGET_PACKAGES){
     # Returns a Boolean value by Quiet option
