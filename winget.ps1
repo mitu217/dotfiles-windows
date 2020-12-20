@@ -24,5 +24,12 @@ $WINGET_PACKAGES = @(
 )
 
 foreach($PACKAGE in $WINGET_PACKAGES){
-    winget install $PACKAGE
-} 
+    if (true)
+    {
+        "$PACKAGE already installed"
+    }
+    else
+    {
+        winget install $PACKAGE
+    }
+}
