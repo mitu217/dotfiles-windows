@@ -9,6 +9,7 @@ dotfiles for windows
 ### For WSL2
 * Must be version 2004 (May 2020 Update), build 19041 or higher, or version 1903 (May 2019 Update), build 18362 or higher
 * Please make sure that virtualization is enabled inside of your computer's BIOS 
+  * `SVM Mode` for AMD Ryzen
   
 
 ## Install
