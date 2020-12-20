@@ -36,7 +36,6 @@ $WINGET_PACKAGES = @(
     "Google Chrome"
     "Notion"
 )
-
 foreach($PACKAGE in $WINGET_PACKAGES){
     if (winget list | Select-String -Pattern $PACKAGE -Quiet)
     {
