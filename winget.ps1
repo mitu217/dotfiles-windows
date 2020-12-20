@@ -24,7 +24,7 @@ $WINGET_PACKAGES = @(
 )
 
 foreach($PACKAGE in $WINGET_PACKAGES){
-    if (true)
+    if (winget list | sls $PACKAGE)
     {
         "$PACKAGE already installed"
     }
@@ -33,3 +33,4 @@ foreach($PACKAGE in $WINGET_PACKAGES){
         winget install $PACKAGE
     }
 }
+
