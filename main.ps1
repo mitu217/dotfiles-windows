@@ -1,12 +1,8 @@
-# setup winget
+# setup winget && install packages
 iex(new-object net.webclient).downloadstring('https://raw.githubusercontent.com/Mitu217/dotfiles-windows/main/winget.ps1')
 
-# install winget's package
-
-# setup chocolatey
+# setup chocolatey && install packages
 Start-Process powershell.exe -Verb Runas -ArgumentList "-Command Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))"
-
-# install chocolatey's package
 Start-Process powershell.exe -Verb Runas -ArgumentList "-Command iex(new-object net.webclient).downloadstring('https://raw.githubusercontent.com/Mitu217/dotfiles-windows/main/chocolatey_packages.ps1'); pause"
 
 # setup wsl2
