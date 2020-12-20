@@ -8,7 +8,5 @@
 
     "experimentalFeatures": {
         "list": true,
-        "upgrade": true,
-        "uninstall": true
     }
 }
