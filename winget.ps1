@@ -11,21 +11,32 @@ else
     Remove-Item winget-cli.appbundle
 }
 
+# settings
+# 1. enable experimental mode
+#   a. list command
+Invoke-WebRequest -UseBasicParsing -Uri https://raw.githubusercontent.com/Mitu217/dotfiles-windows/main/settings.json -OutFile $env:LOCALAPPDATA\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\settings.json
+
+winget source update
+
 # install packages
-$WINGET_PACKAGES = @()
-winget install "1password"
-winget install "CPU-Z"
-winget install "GPU-Z"
-winget install "Discord"
-winget install "Fork"
-winget install "AutoHotkey"
-winget install "7Zip"
-winget install "Windows Terminal"
-winget install "Unity Hub"
-winget install "Slack"
-winget install "Visual Studio Code"
-winget install "Sublime Text"
-winget install "Google Chrome"
-winget install "Notion"
-winget install "Git"
-winget install "Ubuntu"
+$WINGET_PACKAGES = @(
+    "1password"
+    "CPU-Z"
+    "GPU-Z"
+    "Discord"
+    "Fork"
+    "AutoHotkey"
+    "7Zip"
+    "Windows Terminal"
+    "Unity Hub"
+    "Slack"
+    "Ubuntu"
+    "Visual Studio Code"
+    "Sublime Text"
+    "Google Chrome"
+    "Notion"
+)
+
+foreach($PACKAGE in $WINGET_PACKAGES){
+    winget install $PACKAGE
+} 
