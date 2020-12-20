@@ -1,7 +1,5 @@
 # setup winget
-Invoke-WebRequest -UseBasicParsing -Uri https://raw.githubusercontent.com/Mitu217/dotfiles-windows/main/winget.ps1 -OutFile setup_winget.ps1
-./setup_winget.ps1
-Remove-Item setup_winget.ps1
+iex(new-object net.webclient).downloadstring('https://raw.githubusercontent.com/Mitu217/dotfiles-windows/main/winget.ps1')
 
 # install winget's package
 
