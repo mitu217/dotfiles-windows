@@ -17,9 +17,8 @@ else
 #     list command is not perfect (https://github.com/microsoft/winget-cli/issues/119)
 Invoke-WebRequest -UseBasicParsing -Uri https://raw.githubusercontent.com/Mitu217/dotfiles-windows/main/settings.json -OutFile $env:LOCALAPPDATA\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\settings.json
 
-winget source update
-
 # install packages
+winget source update
 $WINGET_PACKAGES = @(
     "1password"
     "CPU-Z"
@@ -37,7 +36,6 @@ $WINGET_PACKAGES = @(
     "Google Chrome"
     "Notion"
 )
-
 foreach($PACKAGE in $WINGET_PACKAGES){
     # Returns a Boolean value by Quiet option
     if (winget list | Select-String -Pattern $PACKAGE -Quiet)
