@@ -21,6 +21,20 @@ winget source update
 # install packages
 $WINGET_PACKAGES = @(
     "1password"
+    "CPU-Z"
+    "GPU-Z"
+    "Discord"
+    "Fork"
+    "AutoHotkey"
+    "7Zip"
+    "Windows Terminal"
+    "Unity Hub"
+    "Slack"
+    "Ubuntu"
+    "Visual Studio Code"
+    "Sublime Text"
+    "Google Chrome"
+    "Notion"
 )
 
 foreach($PACKAGE in $WINGET_PACKAGES){
