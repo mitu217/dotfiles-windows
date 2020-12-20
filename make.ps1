@@ -16,7 +16,7 @@ else {
 
 # packages
 Start-Process powershell.exe -ArgumentList "-Command $DOTFILES/package/winget/bundle.ps1" -Wait
-Start-Process powershell.exe -ArgumentList "-Command $DOTFILES/package/scoop/bundle.ps1" -Wait
+Start-Process powershell.exe -ArgumentList "-Command $DOTFILES/package/scoop/bundle.ps1" -Wait -Verb Runas
 Start-Process powershell.exe -ArgumentList "-Command $DOTFILES/package/chocolatey/bundle.ps1" -Wait -Verb Runas
 
 # setup winget && install packages
