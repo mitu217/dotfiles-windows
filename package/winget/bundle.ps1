@@ -34,6 +34,8 @@ $WINGET_PACKAGES = @(
     "Notion"
     "Git"
     "Toolbox"
+    "VcXsrv"
+    "Tweeten"
 )
 foreach($PACKAGE in $WINGET_PACKAGES){
     # Returns a Boolean value by Quiet option
