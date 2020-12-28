@@ -30,7 +30,7 @@ echo '==> Start to deploy dotfiles to home directory'
 echo ''
 for val in ${DOTFILES}
 do
-  ln -sfnv ${DOTFILE_DIR}/wsl2/etc/init/ubuntu/dotfiles/${val} ${HOME}/${val}
+  ln -sfnv ${DOTFILE_DIR}/wsl2/dotfiles/${val} ${HOME}/${val}
 done
 echo ''
 echo $(tput setaf 2)Deploy dotfiles complete!. ✔︎$(tput sgr0)

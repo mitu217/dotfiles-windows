@@ -14,6 +14,11 @@ fi
 # constructed with many minimal functions
 . "$DOTPATH"/wsl2/etc/lib/vital.sh
 
+if has "fcitx-config-gtk3"; then
+    log_pass "fctix_mozc: already installed"
+    exit
+fi
+
 # https://qiita.com/yuta_vamdemic/items/3c14681311e5b326a4eb
 wget -q https://www.ubuntulinux.jp/ubuntu-ja-archive-keyring.gpg -O- | sudo apt-key add -
 wget -q https://www.ubuntulinux.jp/ubuntu-jp-ppa-keyring.gpg -O- | sudo apt-key add -
