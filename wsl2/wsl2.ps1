@@ -16,3 +16,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
 
 # set default version
 wsl --set-default-version 2
+
+# setup config
+Copy-Item ../.wslconfig "$env:USERPROFILE\.wslconfig"
+wsl --shutdown
