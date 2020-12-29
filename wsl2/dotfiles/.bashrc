@@ -1,3 +1,7 @@
+# ssh-key
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/id_rsa
+
 # start VcXsrv
 if ! tasklist.exe | grep vcxsrv.exe > /dev/null ; then
   "/mnt/c/Program Files/VcXsrv/vcxsrv.exe" :0 -multiwindow -clipboard -noprimary -wgl > /dev/null 2>&1 & 

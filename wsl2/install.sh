@@ -46,7 +46,9 @@ echo '==> Start to deploy sshfiles to home directory'
 echo ''
 for val in ${SSHFILES}
 do
-  ln -sfnv ${SSHFILE_SRC_DIR}/${val} ${SSHFILE_DST_DIR}/${val}
+  echo "'${SSHFILE_SRC_DIR}/${val}' -> '${SSHFILE_DST_DIR}/${val}'"
+  cp ${SSHFILE_SRC_DIR}/${val} ${SSHFILE_DST_DIR}/${val}
+  chmod 600 ${SSHFILE_DST_DIR}/${val}
 done
 echo ''
 echo $(tput setaf 2)Deploy sshfiles complete!. ✔︎$(tput sgr0)
