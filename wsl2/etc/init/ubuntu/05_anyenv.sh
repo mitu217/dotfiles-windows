@@ -14,17 +14,16 @@ fi
 # constructed with many minimal functions
 . "$DOTPATH"/wsl2/etc/lib/vital.sh
 
-if has "brew"; then
-    log_pass "brew: already installed"
-    exit
+# https://qiita.com/282Haniwa/items/71a48a10952413416d18
+
+if !has "anyenv"; then
+    git clone https://github.com/anyenv/anyenv ~/.anyenv
+    exec $SHELL -l
+    anyenv install --force-init
 fi
 
-# https://brew.sh/index_ja
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+if !has "goenv"; then
+    anyenv install goenv
+fi
 
-
-sudo apt-get install build-essential
-eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-brew install gcc
-
-log_pass "brew: installed successfully"
+log_pass "anyenv: installed successfully"

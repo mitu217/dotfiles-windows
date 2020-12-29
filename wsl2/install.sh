@@ -7,8 +7,12 @@ GIT_URL="git@github.com:Mitu217/dotfiles-windows.git"
 ARCHIVE_URL="https://github.com/Mitu217/dotfiles-windows/archive/main.tar.gz"
 
 ## Paths
-DOTFILES=".bashrc"
+USERNAME=`cmd.exe /c echo %username% | sed -e 's/\\r//g'`
+DOTFILES=".bashrc .bash_profile"
 DOTFILE_DIR="${HOME}/dotfiles"
+SSHFILES="id_rsa id_rsa.pub"
+SSHFILE_SRC_DIR="/mnt/c/Users/${USERNAME}/.ssh"
+SSHFILE_DST_DIR="${HOME}/.ssh"
 
 has() {
   type "$1" > /dev/null 2>&1
@@ -34,6 +38,18 @@ do
 done
 echo ''
 echo $(tput setaf 2)Deploy dotfiles complete!. ✔︎$(tput sgr0)
+echo ''
+
+# deploy ssh_key
+cd ${SSHFILE_DIR}
+echo '==> Start to deploy sshfiles to home directory'
+echo ''
+for val in ${SSHFILES}
+do
+  ln -sfnv ${SSHFILE_SRC_DIR}/${val} ${SSHFILE_DST_DIR}/${val}
+done
+echo ''
+echo $(tput setaf 2)Deploy sshfiles complete!. ✔︎$(tput sgr0)
 echo ''
 
 # initialize
