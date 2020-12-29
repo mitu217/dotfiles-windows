@@ -18,4 +18,8 @@ fi
 sudo service dbus start
 sudo apt install ubuntu-mate-desktop mate-desktop-environment mate-common mate-core
 
+# https://qiita.com/nishemon/items/bb3aca972404f68bfcd6
+sudo ln -s /mnt/c/Windows/Fonts /usr/share/fonts/windows
+sudo fc-cache -fv
+
 log_pass "x server: installed successfully"

@@ -15,6 +15,7 @@ fi
 . "$DOTPATH"/wsl2/etc/lib/vital.sh
 
 # install JetBrakns ToolBox
-curl -L "https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.19.7784.tar.gz" --insecure | sudo tar zx -C /usr/local/bin --strip-components 1
+JETBRAINS_TOOLBOX_URL="https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.19.7784.tar.gz"
+curl -L "${JETBRAINS_TOOLBOX_URL}" --insecure | sudo tar zx -C /usr/local/bin --strip-components 1
 
 log_pass "bundle: installed successfully"
