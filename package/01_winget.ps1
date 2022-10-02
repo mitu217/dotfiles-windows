@@ -4,7 +4,7 @@ try {
     Get-Command -Name winget -ErrorAction Stop
 }
 catch [System.Management.Automation.CommandNotFoundException] {
-    Invoke-WebRequest -UseBasicParsing -Uri "https://github.com/microsoft/winget-cli/releases/download/$WINGET_VERSION/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.appxbundle" -OutFile winget-cli.appbundle
+    Invoke-WebRequest -UseBasicParsing -Uri "https://github.com/microsoft/winget-cli/releases/download/$WINGET_VERSION/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle" -OutFile winget-cli.appbundle
     Add-AppPackage winget-cli.appbundle
     Remove-Item winget-cli.appbundle
 
