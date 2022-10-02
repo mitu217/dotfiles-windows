@@ -1,24 +1,14 @@
 winget source update
 $WINGET_PACKAGES = @(
-    "1password"
-    "CPU-Z"
-    "GPU-Z"
-    "Discord"
-    "Fork"
-    "AutoHotkey"
-    "7Zip"
-    "Windows Terminal"
-    "Unity Hub"
-    "Slack"
-    "Ubuntu"
-    "Visual Studio Code"
-    "Sublime Text"
-    "Google Chrome"
-    "Notion"
-    "Git"
-    "Toolbox"
-    "VcXsrv"
-    "Tweeten"
+    "AgileBits.1Password"
+    "Discord.Discord"
+    "SlackTechnologies.Slack"
+    "Fork.Fork"
+    "Canonical.Ubuntu.2004"
+    "Microsoft.VisualStudioCode"
+    "SublimeHQ.SublimeText.4"
+    "Google.Chrome"
+    "Git.Git"
 )
 foreach($PACKAGE in $WINGET_PACKAGES){
     # Returns a Boolean value by Quiet option
@@ -28,6 +18,6 @@ foreach($PACKAGE in $WINGET_PACKAGES){
     }
     else
     {
-        winget install $PACKAGE
+        winget install -e --id  $PACKAGE --accept-package-agreements --accept-source-agreements -h
     }
 }
