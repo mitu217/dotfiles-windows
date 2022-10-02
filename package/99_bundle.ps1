@@ -4,7 +4,7 @@ $WINGET_PACKAGES = @(
     "Discord.Discord"
     "SlackTechnologies.Slack"
     "Fork.Fork"
-    "Canonical.Ubuntu.2004"
+    # "Canonical.Ubuntu.2004"
     "Microsoft.VisualStudioCode"
     "SublimeHQ.SublimeText.4"
     "Google.Chrome"
